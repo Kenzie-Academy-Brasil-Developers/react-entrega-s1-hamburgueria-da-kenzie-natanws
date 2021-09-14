@@ -7,4 +7,131 @@
 
 body {
     background-color: var(--color-2);
+    color: white;
+}
+
+.cartContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: fixed;
+    background-color: var(--background);
+    right: -100%;
+    padding: 30px;
+    width: 200px;
+    border-radius: 10px 0 0 10px;
+    color: white;
+    animation: 0.2s ease-in forwards hiding;
+}
+
+@keyframes hiding {
+    from {
+        right: 0;
+    }
+    to {
+        right: -100%;
+    }
+}
+
+.showCart {
+    animation: 0.2s ease-in forwards showing;
+}
+
+@keyframes showing {
+    from {
+        right: -100%;
+    }
+    to {
+        right: 0;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.cartProductContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: start;
+}
+
+.cartTitle {
+    text-align: right;
+    font-size: 0.8rem;
+    margin-top: -10px;
+}
+
+.cartTotal {
+    text-align: right;
+    font-size: 0.8rem;
+    margin-bottom: -10px;
+}
+
+.SpanTitle {
+    font-size: 1.2rem;
+}
+
+.SpanPrice {
+    font-size: 0.7rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container form {
+    width: 100%;
+}
+
+.container form input {
+    border: none;
+    border-radius: 15px 0 0 15px;
+    padding: 3px 5px;
+}
+
+.container form button {
+    border: none;
+    border-radius: 0 15px 15px 0;
+    background-color: var(--color-1);
+    color: white;
+}
+
+.cartButton {
+    border: none;
+    border-radius: 15px;
+    background-color: var(--color-1);
+    color: white;
+}
+
+.container h2 {
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+    background-color: var(--color-1);
+    color: white;
+}
+
+.product {
+    width: 150px;
+    border-radius: 10px;
+    background-color: var(--color-1);
+    padding: 15px;
+    margin: 10px;
+}
+
+.product button {
+    border-radius: 15px;
+    border: 0px;
+    background-color: var(--color-3);
+    color: var(--color-1);
 }
